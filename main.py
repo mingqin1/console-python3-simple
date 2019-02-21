@@ -15,7 +15,7 @@ for x in range(60*48):
     
     print ( dt)
     
-    url = "http://localhost:9200/{}-fake/fake".format(dt)
+    url = "https://search-smart-search-bqq3mw3dxiheoiybcf2cvl6rqi.us-east-1.es.amazonaws.com/{}-fake/fake".format(dt)
     
     print ( url)
     
