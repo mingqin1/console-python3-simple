@@ -4,6 +4,12 @@ import string
 import requests
 import json
 
+
+
+r = requests.get('https://api.github.com/events')
+print(r.content)
+print("Hello, world!")
+
 start_date = datetime(2019, 2, 20)
 
 for x in range(60*48):
@@ -15,7 +21,7 @@ for x in range(60*48):
     
     print ( dt)
     
-    url = "https://search-smart-search-bqq3mw3dxiheoiybcf2cvl6rqi.us-east-1.es.amazonaws.com/{}-fake/fake".format(dt)
+    url = "https://localhost/{}-fake/fake".format(dt)
     
     print ( url)
     
@@ -30,9 +36,6 @@ for x in range(60*48):
     
     print ( json.dumps(doc))
     
-    #resp = requests.post(url, json=doc)
+    resp = requests.post(url, json=doc)
     
-
-#r = requests.get('https://api.github.com/events')
-#print(r.content)
-print("Hello, world!")
+    print ( resp.text )
