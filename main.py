@@ -39,3 +39,6 @@ for x in range(60*48):
     resp = requests.post(url, json=doc)
     
     print ( resp.text )
+
+    # To run this program , please run this command in linix prompt to install requests package 
+    # liunx $>  python -m pip install --user requests
