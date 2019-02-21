@@ -7,7 +7,7 @@ import json
 start_date = datetime(2019, 2, 20)
 
 for x in range(60*1):
-    
+    print (x, ", ",)
     single_date = start_date + timedelta(minutes=x)
     dt = single_date.strftime("%Y-%m-%d")
     doc = { "user" : "patriotism.com", 
