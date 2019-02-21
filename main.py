@@ -6,10 +6,19 @@ import json
 
 start_date = datetime(2019, 2, 20)
 
-for x in range(60*1):
-    print (x, ", ",)
+for x in range(60*48):
+
+    print (x, ", ",) 
+
     single_date = start_date + timedelta(minutes=x)
     dt = single_date.strftime("%Y-%m-%d")
+    
+    print ( dt)
+    
+    url = "http://localhost:9200/{}-fake/fake".format(dt)
+    
+    print ( url)
+    
     doc = { "user" : "patriotism.com", 
             "post_date" : single_date.isoformat(),  
             "message" : ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(12)) , 
@@ -20,6 +29,9 @@ for x in range(60*1):
     }
     
     print ( json.dumps(doc))
+    
+    #resp = requests.post(url, json=doc)
+    
 
 #r = requests.get('https://api.github.com/events')
 #print(r.content)
