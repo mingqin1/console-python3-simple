@@ -12,16 +12,18 @@ print("Hello, world!")
 
 start_date = datetime(2019, 2, 20)
 
-for x in range(60*48):
+for x in range(60*1):
 
     print (x, ", ",) 
 
     single_date = start_date + timedelta(minutes=x)
+    print ( single_date.isoformat())
+
     dt = single_date.strftime("%Y-%m-%d")
     
     print ( dt)
     
-    url = "https://localhost/{}-fake/fake".format(dt)
+    url = "https://elastic:fVfDlQrGpDNJh4gC4pDfL6Xk@48bc81b663c64e919e8045ccb4bcbd4d.us-west1.gcp.cloud.es.io:9243/{}-fake/fake".format(dt)
     
     print ( url)
     
@@ -39,6 +41,3 @@ for x in range(60*48):
     resp = requests.post(url, json=doc)
     
     print ( resp.text )
-
-    # Prior to run this program , please run this command in linix prompt to install requests package 
-    # liunx $>  python -m pip install --user requests
