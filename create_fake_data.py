@@ -23,7 +23,7 @@ for x in range(60*1):
     
     #print ( dt)
     
-    url = "https://elastic:j8J6xNdrujtr560tUhPpJIPh@48bc81b663c64e919e8045ccb4bcbd4d.us-west1.gcp.cloud.es.io:9243/{}-fake/fake".format(dt)
+    url = "https://elastic:7FPxC9XsiEEotQD7y2JbvvT5@48bc81b663c64e919e8045ccb4bcbd4d.us-west1.gcp.cloud.es.io:9243/{}-fake/fake".format(dt)
     
     #print url
     
