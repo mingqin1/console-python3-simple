@@ -10,9 +10,9 @@ r = requests.get('https://api.github.com/events')
 print(r.content)
 print("Hello, world!")
 
-start_date = datetime(2019, 2, 20)
+start_date = datetime(2019, 2, 26)
 
-for x in range(60*1):
+for x in range(60*24):
 
     print (x, ", ",) 
 
